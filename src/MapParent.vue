@@ -1,10 +1,7 @@
 <template>
   <div>
-    <div id="map"></div>
-    <template v-if="!!map">
-      <template v-for="marker in markers">
-        <child-maker :position="marker" />
-      </template>
+    <template v-for="marker in markers">
+      <child-maker :position="marker" />
     </template>
   </div>
 </template>

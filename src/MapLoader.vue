@@ -9,9 +9,6 @@
 
 <script>
 import GoogleMapsLoader from 'google-maps'
-import MapParent from './MapParent'
-import InfoItem from "./InfoItem"
-import Vue from "vue"
 
 const API_KEY = 'AIzaSyC9VdVBb15bb4-msBd_SqBv0SiofrAAKk0'
 GoogleMapsLoader.KEY = API_KEY

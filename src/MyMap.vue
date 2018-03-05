@@ -3,7 +3,7 @@
     <h1>Map</h1>
     <map-loader>
       <template slot-scope="scopeProps">
-        <map-parent 
+        <map-parent
           :google="scopeProps.google"
           :map="scopeProps.map"
           :markers="markers"
