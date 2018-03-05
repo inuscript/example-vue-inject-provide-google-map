@@ -16,12 +16,10 @@
 import GoogleMapsLoader from 'google-maps'
 import MapProvider from './MapProvider'
 
-const API_KEY = 'AIzaSyC9VdVBb15bb4-msBd_SqBv0SiofrAAKk0'
-GoogleMapsLoader.KEY = API_KEY
-
 export default {
   props:{
-    center: Object
+    center: Object,
+    apiKey: String
   },
   components: {
     MapProvider
@@ -33,6 +31,7 @@ export default {
     }
   },
   mounted () {
+    GoogleMapsLoader.KEY = this.apiKey
     GoogleMapsLoader.load((google) => {
       this.google = google
       this.initializeMap()
@@ -53,7 +52,7 @@ export default {
 
 <style scoped>
 #map {
-  height: 500px;
-  width: 500px;
+  height: 100vh;
+  width: 100%;
 }
 </style>

@@ -1,7 +1,10 @@
 <template>
   <div>
     <h1>Map</h1>
-    <map-loader :center="markers[0]">
+    <map-loader 
+      :center="markers[0]"
+      apiKey="AIzaSyC9VdVBb15bb4-msBd_SqBv0SiofrAAKk0"
+    >
       <template v-for="marker in markers">
         <child-maker :position="marker" />
       </template>
