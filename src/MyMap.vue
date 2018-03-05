@@ -2,7 +2,7 @@
   <div>
     <h1>Map</h1>
     <map-loader 
-      :center="markers[0]"
+      :map-config="mapConfig"
       apiKey="AIzaSyCdsCZwgVbKBnvwqtPQ8Mqcv5P0lNzuxs8"
     >
       <template v-for="marker in markers">
@@ -19,6 +19,14 @@ import ChildMaker from './ChildMaker'
 export default {
   props: {
     markers: Array
+  },
+  data(){
+    return {
+      mapConfig: {
+        zoom: 12,
+        center: this.markers[0]
+      }
+    }
   },
   components: {
     MapLoader,

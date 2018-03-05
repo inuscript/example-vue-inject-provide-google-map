@@ -18,7 +18,7 @@ import MapProvider from './MapProvider'
 
 export default {
   props:{
-    center: Object,
+    mapConfig: Object,
     apiKey: String
   },
   components: {
@@ -41,10 +41,7 @@ export default {
     initializeMap (){
       const mapContainer = this.$el.querySelector('#map')
       const { Map } = this.google.maps
-      this.map = new Map(mapContainer, {
-        center: this.center,
-        zoom: 12
-      })
+      this.map = new Map(mapContainer, this.mapConfig)
     }
   }
 }
