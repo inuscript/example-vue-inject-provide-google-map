@@ -1,12 +1,14 @@
 <template>
   <div>
     <h1>Map</h1>
-    <map-loader>
+    <map-loader :center="markers[0]">
       <template slot-scope="scopeProps">
-        <map-parent
+        <child-marker 
+          v-for="(marker,i) in markers"
+          :key="i"
+          :position="marker" 
           :google="scopeProps.google"
           :map="scopeProps.map"
-          :markers="markers"
         />
       </template>
     </map-loader>
@@ -15,14 +17,15 @@
 
 <script>
 import MapLoader from "./MapLoader.vue"
-import MapParent from "./MapParent.vue"
+import ChildMarker from "./ChildMarker.vue"
+
 export default {
   props: {
     markers: Array
   },
   components: {
     MapLoader,
-    MapParent
+    ChildMarker
   }
 }
 </script>

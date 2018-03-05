@@ -14,6 +14,10 @@ const API_KEY = 'AIzaSyC9VdVBb15bb4-msBd_SqBv0SiofrAAKk0'
 GoogleMapsLoader.KEY = API_KEY
 
 export default {
+  props: {
+    markers: Array,
+    center: Object
+  },
   data(){
     return {
       google: null,
@@ -31,6 +35,7 @@ export default {
       const mapContainer = this.$el.querySelector('#map')
       const { Map } = this.google.maps
       this.map = new Map(mapContainer, {
+        center: this.center,
         zoom: 12
       })
     }

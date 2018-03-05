@@ -1,12 +1,13 @@
 <template></template>
 <script>
 export default {
-  inject: ["google", "map"],
   props: {
+    google: Object,
+    map: Object,
     position: Object
   },
   data(){
-    return { marker: null}
+    return { marker: null }
   },
   mounted(){
     const { Marker } = this.google.maps
