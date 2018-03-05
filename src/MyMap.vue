@@ -6,7 +6,7 @@
       apiKey="AIzaSyCdsCZwgVbKBnvwqtPQ8Mqcv5P0lNzuxs8"
     >
       <template v-for="marker in markers">
-        <child-maker :position="marker" />
+        <child-marker :position="marker" />
       </template>
     </map-loader>
   </div>
@@ -14,7 +14,7 @@
 
 <script>
 import MapLoader from "./MapLoader.vue"
-import ChildMaker from './ChildMaker'
+import ChildMarker from './ChildMarker'
 
 export default {
   props: {
@@ -30,7 +30,7 @@ export default {
   },
   components: {
     MapLoader,
-    ChildMaker
+    ChildMarker
   }
 }
 </script>
