@@ -10,7 +10,6 @@ export default {
   },
   mounted(){
     const { Marker } = this.google.maps
-    console.log(this.map)
     this.marker = new Marker({
       position: this.position,
       map: this.map,
