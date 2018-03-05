@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import GoogleMapsLoader from 'google-maps'
+import GoogleMapsApiLoader from 'google-maps-api-loader'
 import MapProvider from './MapProvider'
 
 export default {
@@ -31,8 +31,9 @@ export default {
     }
   },
   mounted () {
-    GoogleMapsLoader.KEY = this.apiKey
-    GoogleMapsLoader.load((google) => {
+    GoogleMapsApiLoader({
+      apiKey: this.apiKey
+    }).then((google) => {
       this.google = google
       this.initializeMap()
     })

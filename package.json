@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "google-maps": "^3.2.1",
+    "google-maps-api-loader": "^1.1.1",
     "vue": "^2.5.2"
   },
   "devDependencies": {
