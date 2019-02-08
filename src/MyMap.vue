@@ -3,7 +3,7 @@
     <h1>Map</h1>
     <map-loader 
       :map-config="mapConfig"
-      apiKey="AIzaSyCdsCZwgVbKBnvwqtPQ8Mqcv5P0lNzuxs8"
+      apiKey="AIzaSyCZGrJNMfqW3Y404n1jKIc72t9fwdPMtnw"
     >
       <template v-for="marker in markers">
         <child-marker :position="marker" />
